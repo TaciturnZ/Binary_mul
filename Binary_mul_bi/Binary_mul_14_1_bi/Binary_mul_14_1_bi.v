@@ -4,7 +4,7 @@ module Binary_mul_14_1_bi (P, A, B, clk, rst_n, en);
     input signed [13:0] B; // 乘数
     input clk, rst_n, en;
     output reg signed [26:0] P; // 积
-    wire signed [14:0] A_c;
+    wire signed [13:0] A_c;
     assign A_c = ~A+1;
     wire signed [26:0] product_comb;
                                                                                                          

@@ -57,8 +57,8 @@ module Binary_mul_11_1_bi_tb();
             end
         end
 
-        A = 10'b0;
-        B = 10'b0;
+        A = 11'b0;
+        B = 11'b0;
         // P = 16'b0;
 
         // // Wait for global reset

@@ -40,7 +40,7 @@ module Binary_mul_12_1_bi_tb();
         en = 1;
 
         // 运行测试
-        for (i = -2048; i <= 1023; i = i + 1) begin
+        for (i = -2048; i <= 2047; i = i + 1) begin
             for (j = -2048; j <= 2047; j = j + 1) begin
                 @(negedge clk);
                 A = i;
@@ -49,7 +49,7 @@ module Binary_mul_12_1_bi_tb();
                 #1;
                 @(posedge clk);
                 #1;
-                if (P !== epected_P) begin
+                if (P !== expected_P) begin
                     $display("ERROR: A = %d, B = %d, Expected P = %d, Actual P = %d", A, B, expected_P, P);
                 end else begin
                     $display("PASS:  A = %d, B = %d, P = %d", A, B, P);
@@ -57,8 +57,8 @@ module Binary_mul_12_1_bi_tb();
             end
         end
 
-        A = 11'b0;
-        B = 11'b0;
+        A = 12'b0;
+        B = 12'b0;
         // P = 16'b0;
 
         // // Wait for global reset

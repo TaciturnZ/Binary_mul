@@ -277,8 +277,7 @@ module Binary_mul_11_1_bi (P, A, B, clk, rst_n, en);
 
     always @(posedge clk or negedge rst_n) begin
       if (!rst_n)
-         P <= 21
-         'd0;
+         P <= 21'd0;
       else if (en)
          P <= product_comb;
       else 

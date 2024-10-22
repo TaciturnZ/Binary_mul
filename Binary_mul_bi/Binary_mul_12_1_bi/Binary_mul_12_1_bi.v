@@ -301,7 +301,7 @@ module Binary_mul_12_1_bi (P, A, B, clk, rst_n, en);
     MFA 	  mfa611(.Sum(wmfs611), .Cout(wmfc611), .A(A_c[6]), .B(B[11]), .Sin(wmfs710), .Cin(wmfc610));
     MFA 	  mfa711(.Sum(wmfs711), .Cout(wmfc711), .A(A_c[7]), .B(B[11]), .Sin(wmfs810), .Cin(wmfc710));
     MFA 	  mfa811(.Sum(wmfs811), .Cout(wmfc811), .A(A_c[8]), .B(B[11]), .Sin(wmfs910), .Cin(wmfc810));
-    MFA 	  mfa911(.Sum(wmfs911), .Cout(wmfc911), .A(A_c[9]), .B(B[11]), .Sin(wmfs1010), .Cin(wmfc90));
+    MFA 	  mfa911(.Sum(wmfs911), .Cout(wmfc911), .A(A_c[9]), .B(B[11]), .Sin(wmfs1010), .Cin(wmfc910));
     MFA 	  mfa1011(.Sum(wmfs1011), .Cout(wmfc1011), .A(A_c[10]), .B(B[11]), .Sin(wmfs1110), .Cin(wmfc1010));
     MFA 	  mfa1111(.Sum(wmfs1111), .Cout(wmfc1111), .A(A_c[11]), .B(B[11]), .Sin(wmfs1210), .Cin(wmfc1110));
 
