@@ -444,7 +444,7 @@ module Binary_mul_15_1_bi (P, A, B, clk, rst_n, en);
     MFA 	  mfa1114(.Sum(wmfs1114), .Cout(wmfc1114), .A(A_c[11]), .B(B[14]), .Sin(wmfs1213), .Cin(wmfc1113));
     MFA 	  mfa1214(.Sum(wmfs1214), .Cout(wmfc1214), .A(A_c[12]), .B(B[14]), .Sin(wmfs1313), .Cin(wmfc1213));
     MFA 	  mfa1314(.Sum(wmfs1314), .Cout(wmfc1314), .A(A_c[13]), .B(B[14]), .Sin(wmfs1413), .Cin(wmfc1313));
-    MFA 	  mfa1414(.Sum(wmfs1414), .Cout(wmfc1414), .A(A_c[13]), .B(B[14]), .Sin(wmfs1513), .Cin(wmfc1413));
+    MFA 	  mfa1414(.Sum(wmfs1414), .Cout(wmfc1414), .A(A_c[14]), .B(B[14]), .Sin(wmfs1513), .Cin(wmfc1413));
 
 //Row b15
     FA 	  fa015(.Sum(product_comb[15]), .Cout(wfac015), .A(wmfc014), .B(wmfs114), .Cin(1'b0));

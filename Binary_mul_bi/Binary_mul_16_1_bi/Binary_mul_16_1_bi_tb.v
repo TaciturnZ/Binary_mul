@@ -41,7 +41,7 @@ module Binary_mul_16_1_bi_tb();
 
         // 运行测试
         for (i = -32768; i <= 32767; i = i + 1) begin
-            for (j = -32768; j <= 16383; j = j + 1) begin
+            for (j = -32768; j <= 32767; j = j + 1) begin
                 @(negedge clk);
                 A = i;
                 B = j;
