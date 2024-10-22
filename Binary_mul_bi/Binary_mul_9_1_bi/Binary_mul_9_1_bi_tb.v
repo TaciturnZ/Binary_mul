@@ -27,7 +27,7 @@ module Binary_mul_9_1_bi_tb();
     end
 
     initial begin
-        $dumpfile("wave.vcd");  // 指定波形文件的名称
+        // $dumpfile("wave.vcd");  // 指定波形文件的名称
         $dumpvars(0, Binary_mul_9_1_bi_tb); // Dump所有信号
 
         rst_n = 0;
@@ -57,8 +57,8 @@ module Binary_mul_9_1_bi_tb();
             end
         end
 
-        A = 8'b0;
-        B = 8'b0;
+        A = 9'b0;
+        B = 9'b0;
         // P = 16'b0;
 
         // // Wait for global reset

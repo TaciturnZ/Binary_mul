@@ -203,7 +203,7 @@ module Binary_mul_9_1_bi (P, A, B, clk, rst_n, en);
 
     always @(posedge clk or negedge rst_n) begin
       if (!rst_n)
-         P <= 15'd0;
+         P <= 17'd0;
       else if (en)
          P <= product_comb;
       else 

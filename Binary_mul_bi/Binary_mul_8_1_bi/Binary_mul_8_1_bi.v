@@ -6,7 +6,7 @@ module Binary_mul_8_1_bi (P, A, B, clk, rst_n, en);
     output reg signed [14:0] P; // 积
     wire signed [7:0] A_c;
     assign A_c = ~A+1;
-    wire signed [12:0] product_comb;
+    wire signed [14:0] product_comb;
                                                                                                          
 //row b0
     wire  wa10, wa20, wa30, wa40, wa50, wa60, wa70, wa80, wa90, wa100, wa110, wa120, wa130, wa140;
