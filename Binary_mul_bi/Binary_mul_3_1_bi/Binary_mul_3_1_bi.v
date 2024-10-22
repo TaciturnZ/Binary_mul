@@ -22,7 +22,7 @@ module Binary_mul_3_1_bi (P, A, B, clk, rst_n, en);
    wire	 wmfs12,wmfs22;
 
 //row b3
-   wire  wfac04,wfac13;
+   wire  wfac03,wfac13;
 
 //Row bo Implementation
    and a00(product_comb[0], A[0], B[0]);
@@ -49,7 +49,7 @@ module Binary_mul_3_1_bi (P, A, B, clk, rst_n, en);
 
    always @(posedge clk or negedge rst_n) begin
       if (!rst_n)
-         P <= 7'd0;
+         P <= 5'd0;
       else if (en)
          P <= product_comb;
       else 
