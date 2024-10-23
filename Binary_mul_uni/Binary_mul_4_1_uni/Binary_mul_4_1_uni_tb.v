@@ -9,7 +9,7 @@ module Binary_mul_4_1_uni_tb();
     wire unsigned [7:0] P;
 
     integer i, j;
-    reg [6:0] expected_P;
+    reg [7:0] expected_P;
 
     Binary_mul_4_1_uni uut (
         .A(A),
@@ -26,7 +26,7 @@ module Binary_mul_4_1_uni_tb();
     end
 
     initial begin
-        $dumpfile("Bwave.vcd"); 
+        $dumpfile("wave.vcd"); 
         $dumpvars(0, Binary_mul_4_1_uni_tb); 
 
         rst_n = 0;

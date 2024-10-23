@@ -72,8 +72,8 @@ module Binary_mul_4_1_uni (P, A, B, clk, rst_n, en);
          P <= 8'd0;
       else if (en)
          P <= product_comb;
+      else
+         P <= P;  
    end
 
 endmodule
-
-

@@ -76,7 +76,7 @@ module Binary_mul_5_1_uni (P, A, B, clk, rst_n, en);
    MFA 	  mfa14(.Sum(wmfs14), .Cout(wmfc14), .A(A[1]), .B(B[4]), .Sin(wmfs23), .Cin(wmfc13));
    MFA 	  mfa24(.Sum(wmfs24), .Cout(wmfc24), .A(A[2]), .B(B[4]), .Sin(wmfs33), .Cin(wmfc23));
    MFA 	  mfa34(.Sum(wmfs34), .Cout(wmfc34), .A(A[3]), .B(B[4]), .Sin(wmfs43), .Cin(wmfc33));
-   MFA 	  mfa44(.Sum(wmfs44), .Cout(wmfc44), .A(a[4]), .B(B[4]), .Sin(wmfs53), .Cin(wmfc43));
+   MFA 	  mfa44(.Sum(wmfs44), .Cout(wmfc44), .A(A[4]), .B(B[4]), .Sin(wmfs53), .Cin(wmfc43));
 
    MFA     mfa54(.Sum(wmfs54), .Cout(wmfc54), .A(1'b0), .B(B[4]), .Sin(wmfs63), .Cin(wmfc53));
 
