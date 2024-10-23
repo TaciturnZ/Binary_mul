@@ -62,10 +62,10 @@ module Binary_mul_4_1_uni (P, A, B, clk, rst_n, en);
    MFA 	  mfa43(.Sum(wmfs43), .Cout(wmfc43), .A(1'b0), .B(B[3]), .Sin(wmfs52), .Cin(wmfc42));
 
 //Row b4
-   FA 	  fa03(.Sum(product_comb[4]), .Cout(wfac04), .A(wmfc03), .B(wmfs13), .Cin(1'b0));
-   FA 	  fa13(.Sum(product_comb[5]), .Cout(wfac14), .A(wmfc13), .B(wmfs23), .Cin(wfac04));
-   FA 	  fa23(.Sum(product_comb[6]), .Cout(wfac24), .A(wmfc23), .B(wmfs33), .Cin(wfac14));
-   FA 	  fa33(.Sum(product_comb[7]), .Cout(wfac34), .A(wmfc33), .B(wmfs43), .Cin(wfac24));
+   FA 	  fa04(.Sum(product_comb[4]), .Cout(wfac04), .A(wmfc03), .B(wmfs13), .Cin(1'b0));
+   FA 	  fa14(.Sum(product_comb[5]), .Cout(wfac14), .A(wmfc13), .B(wmfs23), .Cin(wfac04));
+   FA 	  fa24(.Sum(product_comb[6]), .Cout(wfac24), .A(wmfc23), .B(wmfs33), .Cin(wfac14));
+   FA 	  fa34(.Sum(product_comb[7]), .Cout(wfac34), .A(wmfc33), .B(wmfs43), .Cin(wfac24));
 
    always @(posedge clk or negedge rst_n) begin
       if (!rst_n)
