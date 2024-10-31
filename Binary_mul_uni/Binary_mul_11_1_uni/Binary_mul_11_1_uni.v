@@ -23,7 +23,7 @@ module Binary_mul_11_1_uni (P, A, B, clk, rst_n, en);
    wire	 wmfs13,wmfs23,wmfs33,wmfs43,wmfs53,wmfs63,wmfs73,wmfs83,wmfs93,wmfs103,wmfs113,wmfs123,wmfs133,wmfs143,wmfs153,wmfs163,wmfs173,wmfs183;
 
 //row b4
-   wire	 wmfc04,wmfc14,wmfc24,wmfc34,wmfc44,wmfc54,wmfc64,wmfc74,wmfc84,wmfc94,wmfc104,wmfc114,wmfc124,wmfc134,wmfc144,wmfc154,wmfc164,wmfc174;
+   wire	wmfc04,wmfc14,wmfc24,wmfc34,wmfc44,wmfc54,wmfc64,wmfc74,wmfc84,wmfc94,wmfc104,wmfc114,wmfc124,wmfc134,wmfc144,wmfc154,wmfc164,wmfc174;
    wire  wmfs14,wmfs24,wmfs34,wmfs44,wmfs54,wmfs64,wmfs74,wmfs84,wmfs94,wmfs104,wmfs114,wmfs124,wmfs134,wmfs144,wmfs154,wmfs164,wmfs174;
 
 //row b5
