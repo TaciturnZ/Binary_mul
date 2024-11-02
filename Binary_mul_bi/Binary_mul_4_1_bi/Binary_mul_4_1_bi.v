@@ -32,7 +32,7 @@ module Binary_mul_4_1_bi (P, A, B, clk, rst_n, en);
    reg   wmfc03_p4, wmfc13_p4, wmfc23_p4, wmfc33_p4;
 
 //row b4
-   wire	wfac04,wfac14,wfac24;
+   wire	wfac04,wfac14,wfac24,product_comb_4,product_comb_5,product_comb_6;
 
 //Row bo Implementation
    and a00(product_comb_0, A[0], B[0]);
