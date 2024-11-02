@@ -5,7 +5,7 @@ module Binary_mul_7_1_bi (P, A, B, clk, rst_n, en);
    input clk, rst_n, en;
 
    output reg signed [12:0] P; // 积
-   wire signed [12:0] product_comb;
+   // wire signed [12:0] product_comb;
 
 //new
    wire signed [6:0] A_c;
