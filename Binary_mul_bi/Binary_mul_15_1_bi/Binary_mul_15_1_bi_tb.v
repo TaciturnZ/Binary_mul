@@ -5,10 +5,9 @@ module Binary_mul_15_1_bi_tb();
     reg clk;
     reg rst_n;
     reg en;
-    // Outputs
+
     wire signed [28:0] P;
 
-    // Instantiate the Unit Under Test (UUT)
     Binary_mul_15_1_bi uut (
         .A(A),
         .B(B),
@@ -18,17 +17,20 @@ module Binary_mul_15_1_bi_tb();
         .en(en)
     );
 
+    parameter LATENCY = 16;
     integer i, j;
     reg signed [28:0] expected_P;
 
+    // Clock generation
     initial begin
         clk = 0;
         forever #5 clk = ~clk; 
     end
 
+    // Test stimulus
     initial begin
-        // $dumpfile("wave.vcd");  // 指定波形文件的名称
-        $dumpvars(0, Binary_mul_15_1_bi_tb); // Dump所有信号
+        $dumpfile("wave.vcd");  
+        $dumpvars(0, Binary_mul_15_1_bi_tb); 
 
         rst_n = 0;
         en = 0;
@@ -39,15 +41,14 @@ module Binary_mul_15_1_bi_tb();
         rst_n = 1;
         en = 1;
 
-        // 运行测试
         for (i = -16384; i <= 16383; i = i + 1) begin
             for (j = -16384; j <= 16383; j = j + 1) begin
-                @(negedge clk);
+                @(negedge clk); 
                 A = i;
                 B = j;
                 expected_P = i * j;
                 #1;
-                @(posedge clk);
+                repeat (LATENCY) @(posedge clk);
                 #1;
                 if (P !== expected_P) begin
                     $display("ERROR: A = %d, B = %d, Expected P = %d, Actual P = %d", A, B, expected_P, P);
@@ -57,15 +58,7 @@ module Binary_mul_15_1_bi_tb();
             end
         end
 
-        A = 15'b0;
-        B = 15'b0;
-        // P = 16'b0;
-
-        // // Wait for global reset
-        #10;
-
-
-        $finish; // 结束仿真
+        $finish;
     end
 
 endmodule
