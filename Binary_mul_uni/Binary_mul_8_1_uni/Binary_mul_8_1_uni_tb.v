@@ -20,6 +20,7 @@ module Binary_mul_8_1_uni_tb();
         .en(en)
     );
 
+    parameter LATENCY = 9;
     initial begin
         clk = 0;
         forever #5 clk = ~clk; 
@@ -39,20 +40,19 @@ module Binary_mul_8_1_uni_tb();
         rst_n = 1;
         en = 1;
 
-        for (i = 0; i < 256; i = i + 1) begin
-            for (j = 0; j < 128; j = j + 1) begin
-                @(negedge clk);
+        for (i = 0; i <= 255; i = i + 1) begin
+            for (j = 0; j <= 255; j = j + 1) begin
+                @(negedge clk); 
                 A = i;
                 B = j;
-                expected_P = i * j; 
+                expected_P = i * j;
                 #1;
-                @(posedge clk);
-                #1;  
-
+                repeat (LATENCY) @(posedge clk);
+                #1;
                 if (P !== expected_P) begin
-                    $display("ERROR: A=%d, B=%d, Expected P=%d, Actual P=%d", A, B, expected_P, P);
+                    $display("ERROR: A = %d, B = %d, Expected P = %d, Actual P = %d", A, B, expected_P, P);
                 end else begin
-                    $display("PASS:  A=%d, B=%d, P=%d", A, B, P);
+                    $display("PASS:  A = %d, B = %d, P = %d", A, B, P);
                 end
             end
         end
